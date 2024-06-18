@@ -7,6 +7,7 @@ import hero_title from "./../../assets/hero_title.png";
 import info_icon from "./../../assets/info_icon.png";
 import play_icon from "./../../assets/play_icon.png";
 import TitleCards from '../../components/TitleCards/TitleCards';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -15,7 +16,7 @@ const Home = () => {
         <div className='hero'>
           <img src={hero_banner} alt="" className='banner-img'/>
           <div className='hero-caption'>
-            <img src={hero_title} alt="caption-img"/>
+            <img src={hero_title} alt="caption-img" className='caption-img'/>
             <p>Discovering his ties to a secret ancient order, a young man living in modern Instanbul embarks on aquest to save the city from an immortal enemy.</p>
             <div className="hero-btns">
               <button className='btn'>
@@ -29,13 +30,16 @@ const Home = () => {
           </div>
         </div>
         <div className='more-cards'>
-          <TitleCards title="Award winning films"/>
-          <TitleCards title="New on Netflix"/>
-          <TitleCards title="Only on Netflix"/>
-          <TitleCards title="Top picks for you"/>
+          <TitleCards title="Top rated films" category="top_rated"/>
+          <TitleCards title="Popular on Netflix" category="popular"/>
+          <TitleCards title="Upcoming on Netflix" category="upcoming"/>
+          <TitleCards title="Top picks for you" category="now_playing"/>
+        </div>
+        <div>
+          <Footer/>
         </div>
     </div>
   )
 }
 
-export default Home
+export default Home;
